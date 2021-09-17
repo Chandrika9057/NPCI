@@ -1,38 +1,51 @@
-#include<stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
+int AllIndexesRecursive(int input[], int size,
+                    int x, int output[])
+{
+    if (size == 0) {
+        return 0;
+    }
+    int smallAns = AllIndexesRecursive(input + 1,
+                                    size - 1, x, output);
+ 
+    if (input[0] == x) {
+        for (int i = smallAns - 1; i >= 0; i--) {
+            output[i + 1] = output[i] + 1;
+        }
+        output[0] = 0;
+        smallAns++;
+    }
+    else {
+        for (int i = smallAns - 1; i >= 0; i--) {
+            output[i] = output[i] + 1;
+        }
+    }
+    return smallAns;
+}
+void AllIndexes(int input[], int n, int x)
+{
+    int output[n];
+    int size = AllIndexesRecursive(input, n,
+                                x, output);
+    for (int i = 0; i < size; i++) {
+        cout << output[i] << " ";
+    }
+}
 int main()
 {
-int n,i,j,temp,pos=-1;
-printf("Enter number of elements");
-scanf("%d",&n);
-int a[n],item;
-printf("Enter elements in array");
-for(i=0;i<n;i++)
-{
-scanf("%d",&a[i]);
-}
-printf("Enter number to be returned");
-scanf("%d",&item);
-
-//case 1
-/*for (i = 0; i < n; i++) {
-        if (a[i] == item) {
-            pos = i;
-            break;
-        }
-    }
-    printf("%d",pos);
-}
-*/
-
-//case 2
-for(i=0;i<n;i++)
-{
-    for(j=i+1;j<n;j++)
+    int n,x;
+    cout<<"Enter number of elements";
+    cin>>n;
+    int i,arr[n];
+    cout<<"Enter array elements";
+    for(i=0;i<n;i++)
     {
-        if(a[i]==a[j])
-        {
-            printf("%d %d",i,j);
-        }
+        cin>>arr[i];
     }
-}
+    cout<<"Enter element whose position is to be returned";
+    cin>>x;
+    AllIndexes(arr, n, x);
+     
+    return 0;
 }
