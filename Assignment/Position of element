@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+int n,i,j,temp,pos=-1;
+printf("Enter number of elements");
+scanf("%d",&n);
+int a[n],item;
+printf("Enter elements in array");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("Enter number to be returned");
+scanf("%d",&item);
+
+//case 1
+/*for (i = 0; i < n; i++) {
+        if (a[i] == item) {
+            pos = i;
+            break;
+        }
+    }
+    printf("%d",pos);
+}
+*/
+
+//case 2
+for(i=0;i<n;i++)
+{
+    for(j=i+1;j<n;j++)
+    {
+        if(a[i]==a[j])
+        {
+            printf("%d %d",i,j);
+        }
+    }
+}
+}
