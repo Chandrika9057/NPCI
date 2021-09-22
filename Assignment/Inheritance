@@ -1,0 +1,52 @@
+class Grandparent
+{
+    int nop;
+    String name;
+    public Grandparent(int nop,String name)
+    {
+        this.nop=nop;
+        this.name=name;
+    }
+    public void printDetails() 
+    {
+    System.out.println("No of properties: " + nop);
+    System.out.println("Name of property: " + name);
+    }
+}
+class Parent extends Grandparent
+{
+    int enop;
+    public Parent(int nop,String name,int enop)
+    {
+        super(nop,name);
+        this.enop=enop;
+    }
+    public void pDetails() 
+    {
+    printDetails();
+    System.out.println("Extras of property: " + enop);
+    }
+}
+class Child extends Parent
+{
+   int exnop;
+    public Child(int nop,String name,int enop,int exnop)
+    {
+        super(nop,name,enop);
+        this.exnop=exnop;
+    }
+    public void cDetails() 
+    {
+    pDetails();
+    System.out.println("Extra No of properties: " + exnop);
+    
+    }
+}
+
+public class Main {
+
+  public static void main(String[] args) {
+    Child cp = new Child(1,"House",3,5);
+    cp.cDetails(); 
+  }
+}
