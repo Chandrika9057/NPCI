@@ -1,0 +1,53 @@
+class Vehicle {
+  private int no;
+  private String name; 
+  public Vehicle(int no, String name) {
+    this.no = no;  
+    this.name = name; 
+  }
+  public void printDetails() {
+    System.out.println("Number: " + no);
+    System.out.println("Name: " + name);
+  }
+}
+class Spare extends Vehicle {
+    private int wheels;
+    private int glass;
+    private int doors;
+    private int cost;
+    public Spare(int no, String name,int wheels, int glass, int doors) {
+    super(no,name);  
+    this.wheels = wheels; 
+    this.glass = glass;  
+    this.doors = doors; 
+    if(name=="Bently")
+    {
+    cost=(wheels*10000)+(glass*1000)+(doors*5000);
+    this.cost=cost;
+    }
+    else if(name=="Polo")
+    {
+       cost=(wheels*1000)+(glass*100)+(doors*10);
+        this.cost=cost;  
+    }
+    else if(name=="Trailer")
+    {
+        cost=(wheels*5000)+(glass*500)+(doors*50);
+        this.cost=cost;
+    }
+  }
+  public void SpareDetails() {  
+    printDetails();         
+    System.out.println("Wheels: " + wheels);
+    System.out.println("Glass: " + glass);
+    System.out.println("Doors: " + doors);
+    System.out.println("Cost:"+cost);
+  }
+  
+}
+public class Main {
+    public static void main(String[] args) {
+    Spare s= new Spare(1,"Bently",5,2,2);
+    s.SpareDetails();
+}
+}
