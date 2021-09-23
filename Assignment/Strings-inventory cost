@@ -1,0 +1,25 @@
+Write a program to calculate the inventory set of products, for a seller
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	      String s1="Amazon";
+	      String s2="Flipkart";
+	      String s3="Snapdeal";
+	      String p1="Iphone";
+	      String p2="Samsung";
+	      String p3="Laptop";
+	      String p4="Tab";
+	      String input;
+	      int in;
+	      Scanner s=new Scanner(System.in);
+	      input=s.nextLine();
+	      in=s.nextInt();
+	      System.out.println(s1+" "+input);
+	      if(in==1)
+	      {
+	          System.out.println(s2+" "+s3);
+	}
+}
+}
