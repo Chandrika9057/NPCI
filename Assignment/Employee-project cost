@@ -1,0 +1,53 @@
+import java.util.*;
+class employee
+{
+    Scanner s=new Scanner(System.in);
+    int emp_id;
+    String empname;
+    double pcost;
+}
+class salary extends employee
+{
+    double monthly_salary;
+    
+    salary(double monthly_salary,double pcost,int emp_id,String empname)
+    {
+       this.emp_id=emp_id;
+       this.empname=empname;
+       this.pcost=pcost;
+       this.monthly_salary=monthly_salary;
+    }   
+    void condition()
+    {
+        double cost=0.0;
+        cost=pcost-monthly_salary;
+        System.out.println("monthly salary is:"+monthly_salary);
+        System.out.println("name of employee is::"+empname);
+        System.out.println("id of employee is::"+emp_id);
+        System.out.println("project cost is::"+pcost);
+        System.out.println("cost is "+cost);
+    }
+}
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner s=new Scanner(System.in);
+        int id,i;
+        String name;
+        double sal,pcost;
+        for(i=0;i<3;i++)
+        {
+            System.out.println("enter id of employee..");
+            id=s.nextInt();
+            System.out.println("enter name of employee..");
+            name=s.next();
+            System.out.println("enter project cost of...");
+            pcost=s.nextDouble();
+            System.out.println("enter salary of employee");
+            sal=s.nextDouble();
+            salary x=new salary(sal,pcost,id,name);
+            x.condition();
+        }    
+     }
+}
