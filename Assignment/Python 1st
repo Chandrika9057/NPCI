@@ -1,0 +1,27 @@
+l1=["ch","te","er"]
+l2=[]
+for i in l1:
+    m1=int(input("Enter mark of maths"))
+    l2.append(m1)
+    m2=int(input("Enter mark of physics"))
+    l2.append(m2)
+    m3=int(input("Enter mark of chemistry"))
+    l2.append(m3)
+    total=sum(l2)
+    avg=(total/3)
+    print(total)
+    print(avg)
+    if m1<50 and m2<50:
+        print("fail")
+    elif (m1<50 or m2<50) or m3<50:
+        print("Reappear")
+    else:
+        print("pass")
+    if avg>=80:
+        print("Distinction")
+    elif avg>60 and avg<79:
+        print("First Division")
+    elif avg>=50 and avg<=59:
+        print("Second Division")
+    else:
+        print("Fail")
