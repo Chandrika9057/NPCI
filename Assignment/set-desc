@@ -1,0 +1,12 @@
+s={1,5,6,7,2,3}
+s=list(s)
+s1=[]
+while s:
+    min=s[0]
+    for x in s:
+        if x<min:
+            min=x
+    s1.append(min)
+    s.remove(min)
+s1=set(s1)
+print(s1)
