@@ -1,0 +1,6 @@
+d={'One':'Two','Two':'One','Five':'Five'}
+sort_d=sorted(d.items(),key=lambda x:x[1])
+for i in sort_d:
+    print(i[0],i[1])
+sort_d=dict(sort_d)
+print(sort_d)
