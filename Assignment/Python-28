@@ -1,0 +1,4 @@
+tup=(1,2,5,(5,8,9,(8,7,1)))
+print(tup)
+c=tup.count(2)
+print(c)
