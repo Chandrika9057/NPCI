@@ -1,0 +1,11 @@
+n=3
+b=50000
+ca=10000
+d=[100,200,500,1000]
+e=int(input())
+if e>(0.09*b):
+    print("no")
+else:
+    print("yes you can withdraw")
+withdraw=0.09*b
+print(withdraw)
