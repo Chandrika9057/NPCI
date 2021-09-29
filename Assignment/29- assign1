@@ -1,0 +1,15 @@
+l=[1,2,3,4,5,6]
+x=0
+l.append(x)
+print(l)
+
+fruits = ["Apple", "Pear", "Peach", "Banana"]
+prices = [0.35, 0.40, 0.40, 0.28]
+fruit_dictionary = dict(zip(fruits, prices))
+print(fruit_dictionary)
+
+sort_d=sorted(fruit_dictionary.items(),key=lambda x:x[1])
+for i in sort_d:
+    print(i[0],i[1])
+sort_d=dict(sort_d)
+print(sort_d)
