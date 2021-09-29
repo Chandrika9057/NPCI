@@ -1,3 +1,19 @@
+a = [
+  ['chandu', 'cc@gg.com', '123456'],
+ ['Teja', 'te@user.com', '789012'],
+['Hello', 'email@34','9456']
+ ]
+with open('sample.txt', 'w') as r:
+    r.write("name,email,phone \n")
+    for i in a:
+        p = 0
+        while p < len(i) - 1:
+            r.write(i[p])
+            r.write(',')
+            p += 1
+            r.write(i[p])
+            r.write('\n')
+
 l=[]
 with open('sample.txt','r') as file:
     for line in file:
