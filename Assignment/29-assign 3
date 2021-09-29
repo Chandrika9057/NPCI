@@ -1,0 +1,5 @@
+l=[]
+with open('sample.txt','r') as file:
+    for line in file:
+        l.append(line)
+        print(tuple(l))
