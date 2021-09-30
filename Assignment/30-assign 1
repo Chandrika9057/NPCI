@@ -1,0 +1,35 @@
+class project:
+    def __init__(self,name,id,salary,user):
+        self.name=name
+        self.id=id
+        self.salary=salary
+        self.user=user
+
+def get_name(employee):
+    return employee.get('Name')
+
+
+def get_age(employee):
+    return employee.get('age')
+
+
+def get_salary(employee):
+    return employee.get('salary')
+
+def get_user(employee):
+    return employee.get('user')
+
+
+employees.sort(key=get_salary)
+print(employees, end='\n\n')
+    
+
+
+class user(project):
+    def __init__(self,id,name,salary):
+        super().__init__(id,name)
+        self.salary=salary
+        print(self.salary)
+        
+        
+ 
